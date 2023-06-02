@@ -178,37 +178,36 @@ class _MainPageState extends State<MainPage> {
               children: [
                 ...List.generate(
                   CardMenuModel.list.length,
-                  (index) => InkWell(
-                    focusColor: Colors.red,
-                    onTap: () {
-                      _showBottomSheet();
-                    },
-                    // hoverColor: Colors.red,
-                    // splashColor: Colors.red,
-                    // highlightColor: colorScheme.secondary.withOpacity(0.5),
-                    child: Container(
-                      color: colorScheme.primary,
-                      child: Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              CardMenuModel.list[index].icon,
-                              color: Colors.white,
-                              size: 42,
-                            ),
-                            SizedBox(
-                              height: 8,
-                            ),
-                            Text(
-                              CardMenuModel.list[index].title,
-                              style: TextStyle(
+                  (index) => Ink(
+                    child: InkWell(
+                      splashColor: Colors.red,
+                      onTap: () {
+                        _showBottomSheet();
+                      },
+                      child: Container(
+                        color: colorScheme.primary,
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                CardMenuModel.list[index].icon,
                                 color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
+                                size: 42,
                               ),
-                            ),
-                          ],
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                CardMenuModel.list[index].title,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
