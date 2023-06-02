@@ -179,17 +179,17 @@ class _MainPageState extends State<MainPage> {
                 ...List.generate(
                   CardMenuModel.list.length,
                   (index) => InkWell(
+                    focusColor: Colors.red,
                     onTap: () {
-                      // showBottomSheet
                       _showBottomSheet();
                     },
                     // hoverColor: Colors.red,
                     // splashColor: Colors.red,
                     // highlightColor: colorScheme.secondary.withOpacity(0.5),
                     child: Container(
-                        color: colorScheme.primary,
-                        child: Center(
-                            child: Column(
+                      color: colorScheme.primary,
+                      child: Center(
+                        child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(
@@ -209,7 +209,9 @@ class _MainPageState extends State<MainPage> {
                               ),
                             ),
                           ],
-                        ))),
+                        ),
+                      ),
+                    ),
                   ),
                   // child: Container(
                   //   color: colorScheme.primary,
@@ -232,7 +234,7 @@ class _MainPageState extends State<MainPage> {
                   //     ],
                   //   ),
                   // ),
-                )
+                ),
               ],
             ),
           ),
@@ -245,32 +247,29 @@ class _MainPageState extends State<MainPage> {
                   SizedBox(
                     width: 20,
                   ),
-                  Container(
-                    // color: Colors.black,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          'Quick Transfer',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                          ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        'Quick Transfer',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
                         ),
-                        SizedBox(
-                          height: 8,
+                      ),
+                      SizedBox(
+                        height: 8,
+                      ),
+                      Text(
+                        'Create your templates here to make transfer qucker',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
                         ),
-                        Text(
-                          'Create your templates here to make transfer qucker',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 14,
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                   Spacer(),
                   Icon(
