@@ -11,10 +11,10 @@ class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("Notification page")),
-        body: Center(
-          child: Text("Your message is ${routeArguments['message']}"),
-        )
+      appBar: AppBar(title: Text("Notification page")),
+      body: Center(
+        child: Text("Your message is ${routeArguments['message']}"),
+      ),
     );
   }
 }

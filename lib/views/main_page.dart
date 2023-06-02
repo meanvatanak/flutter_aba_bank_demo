@@ -242,45 +242,58 @@ class _MainPageState extends State<MainPage> {
             child: Container(
               width: double.infinity,
               color: Color(0xFF10BAD2),
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        'Quick Transfer',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
+              child: InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed(
+                    '/quick_transfer',
+                    arguments: {
+                      "title": "Quick Transfer",
+                      "description":
+                          'Create your templates here to make transfer quicker',
+                      "icon": Icons.send,
+                    },
+                  );
+                },
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Quick Transfer',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        'Create your templates here to make transfer qucker',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
+                        SizedBox(
+                          height: 8,
                         ),
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  Icon(
-                    Icons.currency_exchange,
-                    color: Colors.white,
-                    size: 64,
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                ],
+                        Text(
+                          'Create your templates here to make transfer quicker',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                    Icon(
+                      Icons.currency_exchange,
+                      color: Colors.white,
+                      size: 64,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -288,47 +301,60 @@ class _MainPageState extends State<MainPage> {
             child: Container(
               width: double.infinity,
               color: Color(0xFFEE5350),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                // alignment: Alignment.bottomRight,
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        'Quick Payment',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
+              child: InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed(
+                    '/quick_payment',
+                    arguments: {
+                      "title": "Quick Payment",
+                      "description":
+                          'Paying your bills with templates is easy and fast',
+                      "icon": Icons.currency_exchange,
+                    },
+                  );
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // alignment: Alignment.bottomRight,
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Quick Payment',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text(
-                        'Paying your bills with templates is easy and fast',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
+                        SizedBox(
+                          height: 8,
                         ),
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  Icon(
-                    Icons.currency_exchange,
-                    color: Colors.white,
-                    size: 64,
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                ],
+                        Text(
+                          'Paying your bills with templates is easy and fast',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+                    Icon(
+                      Icons.currency_exchange,
+                      color: Colors.white,
+                      size: 64,
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
